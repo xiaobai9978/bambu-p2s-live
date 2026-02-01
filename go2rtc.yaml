@@ -1,0 +1,12 @@
+streams:
+  live:
+    - rtsps://bblp:${ACCESS_CODE}@${PRINTER_IP}:322/live/test01
+    - rtsps://bblp:${ACCESS_CODE}@${PRINTER_IP}:322/streaming/live/1
+    - rtsps://bblp:${ACCESS_CODE}@${PRINTER_IP}:8854/live/test01
+    - rtsp://bblp:${ACCESS_CODE}@${PRINTER_IP}:322/live/test01
+
+api:
+  listen: ":1984"
+
+rtsp:
+  listen: ":8554"
