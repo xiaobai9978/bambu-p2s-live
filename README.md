@@ -19,26 +19,22 @@
 ## 🛠️ 快速上手
 
 ### 1. 准备工作
-请确保打印机已开启 **局域网模式 (LAN Mode)**，并准备好以下参数：
+请确保打印机连接到wifi，并准备好以下参数：
 - `PRINTER_IP`: 打印机的局域网 IP
 - `ACCESS_CODE`: 8 位访问码
 - `SERIAL_NUMBER`: 打印机序列号 (SN)
 
-### 2. 使用 Docker Compose (推荐)
-```yaml
-services:
-  bambu-live:
-    image: xiaobai9978/bambu-p2s-live:latest
-    container_name: bambu-p2s-live
-    restart: unless-stopped
-    ports:
-      - "8554:8554" # RTSP 播放端口
-      - "1984:1984" # 网页预览/控制台
-    environment:
-      - PRINTER_IP=192.168.1.100     # 填入打印机IP
-      - ACCESS_CODE=87654321         # 填入访问码
-      - SERIAL_NUMBER=01P00XXXXXXXX  # 填入SN码
+### 2. 使用 Docker
 
+docker run -d \
+  --name bambu-p2s-live \
+  --restart unless-stopped \
+  -p 8554:8554 \
+  -p 1984:1984 \
+  -e PRINTER_IP=192.168.1.100 \
+  -e ACCESS_CODE=87654321 \
+  -e SERIAL_NUMBER=01P00XXXXXXXX \
+  xiaobai9978/bambu-p2s-live:latest
 
 
 ### 📺 观看方式
