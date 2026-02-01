@@ -24,8 +24,10 @@
 - `ACCESS_CODE`: 8 位访问码
 - `SERIAL_NUMBER`: 打印机序列号 (SN)
 
-### 2. 使用 Docker
 
+### 2. 使用普通 Docker 运行 (命令行版)
+
+```bash
 docker run -d \
   --name bambu-p2s-live \
   --restart unless-stopped \
@@ -35,7 +37,6 @@ docker run -d \
   -e ACCESS_CODE=87654321 \
   -e SERIAL_NUMBER=01P00XXXXXXXX \
   xiaobai9978/bambu-p2s-live:latest
-
 
 ### 📺 观看方式
 
