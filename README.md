@@ -47,3 +47,10 @@ docker run -d \
 | **标准 RTSP** | `rtsp://宿主机IP:8554/live` | PotPlayer, VLC, OBS, HA |
 | **网页直接看** | `http://宿主机IP:1984/stream.html?src=live` | Chrome, Firefox, 手机浏览器 |
 | **控制台预览** | `http://宿主机IP:1984` | Go2RTC 后台管理 |
+
+
+
+
+<img width="1470" height="883" alt="47db91eb4c2337a2f7fda7a4f7e028c6" src="https://github.com/user-attachments/assets/df2d4ddf-72f7-4a0d-9969-4f8837662420" />
+
+
