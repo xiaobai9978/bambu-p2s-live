@@ -1,4 +1,3 @@
-cat <<'EOF' > README.md
 # Bambu-P2S-Live 🚀
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/xiaobai9978/bambu-p2s-live)](https://hub.docker.com/r/xiaobai9978/bambu-p2s-live)
