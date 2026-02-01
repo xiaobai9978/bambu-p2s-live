@@ -38,6 +38,8 @@ docker run -d \
   -e SERIAL_NUMBER=01P00XXXXXXXX \
   xiaobai9978/bambu-p2s-live:latest
 
+
+
 ### 📺 观看方式
 
 | 观看方式 | 播放地址 (URL) | 推荐工具 |
