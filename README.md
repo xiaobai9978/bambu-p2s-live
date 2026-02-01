@@ -33,9 +33,9 @@ docker run -d \
   --restart unless-stopped \
   -p 8554:8554 \
   -p 1984:1984 \
-  -e PRINTER_IP=192.168.1.100 \
-  -e ACCESS_CODE=87654321 \
-  -e SERIAL_NUMBER=01P00XXXXXXXX \
+  -e PRINTER_IP=修改成p2s的ip \
+  -e ACCESS_CODE=修改成访问码 \
+  -e SERIAL_NUMBER=修改成序列号 \
   xiaobai9978/bambu-p2s-live:latest
 ```
 ---
