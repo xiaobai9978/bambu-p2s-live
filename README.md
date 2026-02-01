@@ -1,40 +1,34 @@
-# Bambu-P2S-Live 🚀
+cat <<'EOF' > README.md
+# Bambu-P2S-Live
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/xiaobai9978/bambu-p2s-live)](https://hub.docker.com/r/xiaobai9978/bambu-p2s-live)
-[![Docker Image Version](https://img.shields.io/docker/v/xiaobai9978/bambu-p2s-live?label=version)](https://hub.docker.com/r/xiaobai9978/bambu-p2s-live)
+Bambu-P2S-Live 是一个 Docker 工具，专门用于将拓竹 P1/P2/A1 系列打印机的视频流转换为标准 RTSP。
 
-**Bambu-P2S-Live** 是一个轻量级的 Docker 桥接工具，专为 **拓竹 (Bambu Lab) P1 / P2 / A1** 系列打印机开发。它能自动唤醒打印机隐藏的视频端口，并将其转换为标准 RTSP 协议。
+## 功能介绍
+1. 自动发送 MQTT 指令唤醒打印机摄像头。
+2. 将加密视频流转为标准 RTSP 地址。
+3. 支持网页直接预览监控。
 
----
+## 运行方式 (Docker Compose)
 
-## ✨ 核心功能
-
-- **自动化唤醒**：内置守护进程，自动发送 MQTT 指令激活打印机视频流。
-- **协议转换**：将加密的 `RTSPS` 转换为标准 `RTSP`。
-- **多端口兼容**：自动适配 322 和 8854 端口。
-- **网页预览**：支持通过浏览器直接查看监控画面。
-
----
-
-## 🛠️ 快速上手
-
-### 1. 环境变量配置
-请确保打印机已开启 **局域网模式**，并准备好以下参数：
-- `PRINTER_IP`: 打印机 IP 地址
-- `ACCESS_CODE`: 8 位访问码
-- `SERIAL_NUMBER`: 打印机序列号 (SN)
-
-### 2. 使用 Docker Compose (推荐)
-```yaml
 services:
   bambu-live:
     image: xiaobai9978/bambu-p2s-live:latest
     container_name: bambu-p2s-live
     restart: unless-stopped
     ports:
-      - "8554:8554" # RTSP 播放
-      - "1984:1984" # 网页预览
+      - "8554:8554"
+      - "1984:1984"
     environment:
-      - PRINTER_IP=192.168.x.x
-      - ACCESS_CODE=xxxxxxxx
-      - SERIAL_NUMBER=01Pxxxxxxxxxxxx
+      - PRINTER_IP=192.168.1.100
+      - ACCESS_CODE=87654321
+      - SERIAL_NUMBER=01P00XXXXXXXX
+
+## 播放地址
+
+RTSP 地址: rtsp://你的IP:8554/live
+网页预览: http://你的IP:1984/stream.html?src=live
+管理界面: http://你的IP:1984
+
+## 注意事项
+请确保打印机开启了局域网模式，且填写的访问码和 IP 正确。
+EOF
