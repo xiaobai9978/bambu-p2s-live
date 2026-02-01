@@ -3,7 +3,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/xiaobai9978/bambu-p2s-live)](https://hub.docker.com/r/xiaobai9978/bambu-p2s-live)
 [![Docker Image Version](https://img.shields.io/docker/v/xiaobai9978/bambu-p2s-live?label=version)](https://hub.docker.com/r/xiaobai9978/bambu-p2s-live)
 
-**Bambu-P2S-Live** 是一个轻量级的 Docker 桥接工具，专为 **拓竹 (Bambu Lab) p2S 系列打印机开发。它能自动唤醒打印机隐藏的视频端口，并将其转换为标准 RTSP 协议，解决局域网模式下视频流难以获取的问题。
+**Bambu-P2S-Live** 是一个轻量级的 Docker 桥接工具，专为 **拓竹 (Bambu Lab) P2S 系列打印机开发。它能自动唤醒打印机隐藏的视频端口，并将其转换为标准 RTSP 协议，解决局域网模式下视频流难以获取的问题。
 
 ---
 
