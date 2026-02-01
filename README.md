@@ -37,7 +37,7 @@ docker run -d \
   -e ACCESS_CODE=87654321 \
   -e SERIAL_NUMBER=01P00XXXXXXXX \
   xiaobai9978/bambu-p2s-live:latest
-
+```
 ---
 
 ### 📺 观看方式
